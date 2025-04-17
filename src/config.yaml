@@ -1,0 +1,32 @@
+data:
+  raw_data_path: "data/data.csv"
+  processed_data_path: "data/processed_data.csv"
+  train_data_path: "data/train_data.csv"
+  test_data_path: "data/test_data.csv"
+
+preprocessing:
+  test_size: 0.2
+  random_state: 42
+
+model:
+  random_forest:
+    n_estimators: 100
+    max_depth: 10
+    random_state: 42
+  
+  xgboost:
+    n_estimators: 100
+    max_depth: 6
+    learning_rate: 0.1
+    random_state: 42
+  
+  lightgbm:
+    n_estimators: 100
+    max_depth: 6
+    learning_rate: 0.1
+    random_state: 42
+
+training:
+  cv_folds: 5
+  scoring: "accuracy"
+  random_state: 42 
